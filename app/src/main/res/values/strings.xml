@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Discovering Movies</string>
+    <string name="hint_field_search_movie">Search movie</string>
+    <string name="msg_error">Error</string>
+    <string name="msg_success">Success</string>
+    <string name="network_error">Network error</string>
+    <string name="generic_error">Generic error</string>
+    <string name="request_success">Request Success</string>
+    <string name="search_item_title">Search</string>
+    <string name="not_available">Not available</string>
+    <string name="minutes">mins</string>
+    <string name="director">Director</string>
+    <string name="imdb">IMDB</string>
+    <string name="votes">votes</string>
+    <string name="stars">Stars</string>
+    <string name="genre">Genre</string>
+</resources>

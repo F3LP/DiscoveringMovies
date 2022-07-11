@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F3ECEC"
+            tools:context=".moviedetails.MovieDetailsFragment">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image_movie_cover"
+                android:layout_width="0dp"
+                android:layout_height="400dp"
+                android:background="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/inception" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/image_movie_cover"
+                tools:text="Inception" />
+
+            <TextView
+                android:id="@+id/tv_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/tv_title"
+                app:layout_constraintTop_toBottomOf="@id/tv_title"
+                tools:text="2010" />
+
+            <ImageView
+                android:id="@+id/iv_separator"
+                android:layout_width="4dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="@color/grey"
+                app:layout_constraintBottom_toBottomOf="@id/tv_year"
+                app:layout_constraintEnd_toStartOf="@id/tv_run_time_mins"
+                app:layout_constraintStart_toEndOf="@id/tv_year"
+                app:layout_constraintTop_toTopOf="@id/tv_year" />
+
+            <TextView
+                android:id="@+id/tv_run_time_mins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/iv_separator"
+                app:layout_constraintTop_toTopOf="@id/tv_year"
+                tools:text="146" />
+
+            <TextView
+                android:id="@+id/tv_director_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/director"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/tv_year"
+                app:layout_constraintTop_toBottomOf="@id/tv_year" />
+
+            <TextView
+                android:id="@+id/tv_title_imdb_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="@string/imdb"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/tv_imdb_rating"
+                app:layout_constraintTop_toTopOf="@id/tv_year" />
+
+            <TextView
+                android:id="@+id/tv_imdb_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_title_imdb_rating"
+                tools:text="7.6" />
+
+            <TextView
+                android:id="@+id/imdb_rating_votes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                app:layout_constraintEnd_toStartOf="@id/tv_votes_title"
+                app:layout_constraintTop_toBottomOf="@id/tv_title_imdb_rating"
+                tools:text="2000" />
+
+            <TextView
+                android:id="@+id/tv_votes_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="20dp"
+                android:text="@string/votes"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/imdb_rating_votes" />
+
+            <TextView
+                android:id="@+id/tv_director_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/tv_director_title"
+                app:layout_constraintTop_toBottomOf="@id/tv_director_title"
+                tools:text="Samuel Salvador" />
+
+            <TextView
+                android:id="@+id/tv_stars_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/stars"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/tv_director_name"
+                app:layout_constraintTop_toBottomOf="@id/tv_director_name" />
+
+            <TextView
+                android:id="@+id/tv_stars_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/tv_stars_title"
+                app:layout_constraintTop_toBottomOf="@id/tv_stars_title"
+                tools:text="Samuel Salvador" />
+
+            <TextView
+                android:id="@+id/tv_genre_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/genre"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/tv_stars_name"
+                app:layout_constraintTop_toBottomOf="@id/tv_stars_name" />
+
+            <TextView
+                android:id="@+id/tv_genre_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/tv_genre_title"
+                app:layout_constraintTop_toBottomOf="@id/tv_genre_title"
+                tools:text="Sci" />
+
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminateTint="@color/white"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_plot"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:padding="12dp"
+                android:autoSizeTextType="uniform"
+                android:background="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_genre_name"
+                tools:text="@tools:sample/lorem" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
